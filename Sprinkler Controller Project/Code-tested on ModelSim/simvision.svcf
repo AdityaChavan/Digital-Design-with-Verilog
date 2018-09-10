@@ -1,0 +1,471 @@
+# SimVision Command Script (Sat Feb 17 14:35:35 EST 2018)
+#
+# Version 15.10.s024
+#
+# You can restore this configuration with:
+#
+#     simvision -input simvision.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-txe_waveform_navigate-WaveWindow {
+  usual
+  position -row 1 -pos 5 -anchor w
+}
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set txe-navigate-search-locate 0
+preferences set txe-view-hold 0
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -row 1 -pos 3
+}
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set toolbar-Windows-Console {
+  usual
+  shown 1
+}
+preferences set txe-search-show-linenumbers 1
+preferences set schematic-show-rtl 1
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-groupscope 0
+preferences set toolbar-txe_waveform_view-WaveWindow {
+  usual
+  position -row 1 -pos 2
+}
+preferences set key-bindings {Edit>Undo Ctrl+z PageUp PageUp View>Zoom>Next {Alt+Right arrow} View>Zoom>In Alt+i PageDown PageDown Edit>Copy Ctrl+c ScrollDown {Down arrow} Edit>Create>Group Ctrl+g View>Zoom>FullY_widget y Simulation>NextInScope F7 Edit>Select>All Ctrl+a Format>Radix>Decimal Ctrl+Shift+D Edit>Ungroup Ctrl+Shift+G TopOfPage Home Edit>Create>Condition Ctrl+e {command -console SimVision {%w sidebar access designbrowser selectall}} Alt+a ScrollLeft {Left arrow} Edit>SelectAllText Alt+a Edit>TextSearchConsole Alt+s View>Zoom>FullX_widget = Windows>SendTo>Waveform Ctrl+w Simulation>Return Shift+F5 View>CallstackDown {Ctrl+Down arrow} Select>All Ctrl+a Edit>Delete Del Format>Radix>Octal Ctrl+Shift+O Edit>Cut Ctrl+x Simulation>Run F2 Edit>Create>Marker Ctrl+m View>Center Alt+c View>CallstackInWindow Ctrl+k Edit>SelectAll Ctrl+a File>OpenDatabase Ctrl+o Edit>Redo Ctrl+y Format>Radix>Binary Ctrl+Shift+B View>ExpandSequenceTime>AtCursor Alt+x ScrollUp {Up arrow} File>CloseWindow Ctrl+Shift+w ScrollRight {Right arrow} View>Zoom>FullX Alt+= Edit>Create>Bus Ctrl+b Explore>NextEdge Ctrl+\] View>Zoom>Cursor-Baseline Alt+z View>Zoom>OutX Alt+o Edit>GoToLine Ctrl+g View>Zoom>Fit Alt+= View>Zoom>OutX_widget o View>CallstackUp {Ctrl+Up arrow} View>Bookmarks>Add Ctrl+b View>ShowValues Ctrl+s Simulation>Next F6 Edit>Search Ctrl+f Format>Radix>Hexadecimal Ctrl+Shift+H Edit>Create>MarkerAtCursor Ctrl+Shift+M View>Zoom>InX Alt+i View>Zoom>Out Alt+o Edit>TextSearch Ctrl+f View>Zoom>Previous {Alt+Left arrow} Edit>Paste Ctrl+v Format>Signed Ctrl+Shift+S View>CollapseSequenceTime>AtCursor Alt+s View>Zoom>InX_widget i Format>Radix>ASCII Ctrl+Shift+A Simulation>Step F5 Explore>PreviousEdge {Ctrl+[} BottomOfPage End}
+preferences set schematic-show-cells 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set schematic-show-values always
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-Windows-WaveWindow {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set txe-navigate-waveform-next-child 1
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -pos 4 -anchor w
+}
+preferences set vhdl-colors {H #00ffff L #00ffff 0 {} X #ff0000 - {} 1 {} U #9900ff Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set txe-locate-pop-waveform 1
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+preferences set key-bindings {PageUp PageUp Edit>Undo Ctrl+z View>Zoom>In Alt+i View>Zoom>Next {Alt+Right arrow} PageDown PageDown ScrollDown {Down arrow} Edit>Copy Ctrl+c Edit>Select>All Ctrl+a Simulation>NextInScope F7 View>Zoom>FullY_widget y Edit>Create>Group Ctrl+g Format>Radix>Decimal Ctrl+Shift+D Edit>Ungroup Ctrl+Shift+G TopOfPage Home Edit>Create>Condition Ctrl+e {command -console SimVision {%w sidebar access designbrowser selectall}} Alt+a ScrollLeft {Left arrow} Edit>SelectAllText Alt+a Edit>TextSearchConsole Alt+s View>Zoom>FullX_widget = Windows>SendTo>Waveform Ctrl+w Simulation>Return Shift+F5 View>CallstackDown {Ctrl+Down arrow} Select>All Ctrl+a Edit>Delete Del Format>Radix>Octal Ctrl+Shift+O Edit>Cut Ctrl+x Simulation>Run F2 Edit>Create>Marker Ctrl+m View>Center Alt+c View>CallstackInWindow Ctrl+k Edit>SelectAll Ctrl+a File>OpenDatabase Ctrl+o Edit>Redo Ctrl+y Format>Radix>Binary Ctrl+Shift+B View>ExpandSequenceTime>AtCursor Alt+x ScrollUp {Up arrow} File>CloseWindow Ctrl+Shift+w ScrollRight {Right arrow} View>Zoom>FullX Alt+= Edit>Create>Bus Ctrl+b Explore>NextEdge Ctrl+\] View>Zoom>Cursor-Baseline Alt+z View>Zoom>OutX Alt+o Edit>GoToLine Ctrl+g View>Zoom>Fit Alt+= View>Zoom>OutX_widget o View>CallstackUp {Ctrl+Up arrow} View>Bookmarks>Add Ctrl+b Format>Radix>Hexadecimal Ctrl+Shift+H Edit>Search Ctrl+f Simulation>Next F6 View>ShowValues Ctrl+s View>Zoom>InX Alt+i Edit>Create>MarkerAtCursor Ctrl+Shift+M View>Zoom>Out Alt+o Edit>TextSearch Ctrl+f Format>Signed Ctrl+Shift+S Edit>Paste Ctrl+v View>Zoom>Previous {Alt+Left arrow} View>CollapseSequenceTime>AtCursor Alt+s Format>Radix>ASCII Ctrl+Shift+A View>Zoom>InX_widget i BottomOfPage End Explore>PreviousEdge {Ctrl+[} Simulation>Step F5}
+
+#
+# Databases
+#
+database require tb_system -search {
+	./tb_system.trn
+	/nethome/mchang87/ECE8813_Verilog/HW6/tb_system.trn
+}
+#
+# Groups
+#
+catch {group new -name tb_system -overlay 0}
+catch {group new -name system -overlay 0}
+catch {group new -name sdcard -overlay 0}
+catch {group new -name gps -overlay 0}
+group using tb_system
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+     tb_system::tb_System.clk  \
+     tb_system::tb_System.rst  \
+     tb_system::tb_System.SD_read_next_line  \
+     tb_system::tb_System.SD_data_valid  \
+     {tb_system::tb_System.SD_zone[1:0]}  \
+     {tb_system::tb_System.SD_start_time[31:0]}  \
+     {tb_system::tb_System.SD_stop_time[31:0]}  \
+     tb_system::tb_System.gps_data_in_ready  \
+     {tb_system::tb_System.gps_data_in[7:0]}  \
+     tb_system::tb_System.gps_data_valid_out  \
+     {tb_system::tb_System.gps_time_out[47:0]}  \
+     tb_system::tb_System.raining  \
+     tb_system::tb_System.zone_0_out  \
+     tb_system::tb_System.zone_1_out  \
+     tb_system::tb_System.zone_2_out  \
+     tb_system::tb_System.zone_3_out 
+group using system
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+     tb_system::tb_System.mySystem.clk  \
+     tb_system::tb_System.mySystem.rst  \
+     tb_system::tb_System.mySystem.INSP_PERIOD  \
+     tb_system::tb_System.mySystem.LINE_NUMBER  \
+     tb_system::tb_System.mySystem.TCLK  \
+     tb_system::tb_System.mySystem.ST_IDLE  \
+     tb_system::tb_System.mySystem.ST_INSP  \
+     tb_system::tb_System.mySystem.NS  \
+     tb_system::tb_System.mySystem.PS  \
+     tb_system::tb_System.mySystem.raining  \
+     tb_system::tb_System.mySystem.gps_data_valid  \
+     {tb_system::tb_System.mySystem.gps_time_reg[31:0]}  \
+     tb_system::tb_System.mySystem.SD_read_next_line  \
+     tb_system::tb_System.mySystem.SD_data_valid  \
+     {tb_system::tb_System.mySystem.SD_zones[1:0]}  \
+     {tb_system::tb_System.mySystem.SD_start_time[31:0]}  \
+     {tb_system::tb_System.mySystem.SD_stop_time[31:0]}  \
+     tb_system::tb_System.mySystem.clr_time  \
+     tb_system::tb_System.mySystem.time_counter  \
+     tb_system::tb_System.mySystem.inc_line  \
+     tb_system::tb_System.mySystem.clr_line  \
+     tb_system::tb_System.mySystem.line_counter  \
+     tb_system::tb_System.mySystem.inc_rain  \
+     tb_system::tb_System.mySystem.clr_rain  \
+     tb_system::tb_System.mySystem.rain_counter  \
+     tb_system::tb_System.mySystem.zone_0  \
+     tb_system::tb_System.mySystem.zone_1  \
+     tb_system::tb_System.mySystem.zone_2  \
+     tb_system::tb_System.mySystem.zone_3 
+group using sdcard
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+     tb_system::tb_System.mySDCard.clk  \
+     tb_system::tb_System.mySDCard.NS  \
+     tb_system::tb_System.mySDCard.PS  \
+     tb_system::tb_System.mySDCard.FILE_START  \
+     tb_system::tb_System.mySDCard.read_next_line  \
+     {tb_system::tb_System.mySDCard.ram_addr[7:0]}  \
+     tb_system::tb_System.mySDCard.data_valid  \
+     {tb_system::tb_System.mySDCard.zone_reg[15:0]}  \
+     {tb_system::tb_System.mySDCard.zone[1:0]}  \
+     {tb_system::tb_System.mySDCard.start_time[31:0]}  \
+     {tb_system::tb_System.mySDCard.stop_time[31:0]} 
+group using gps
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+     tb_system::tb_System.myGPS.CLK  \
+     tb_system::tb_System.myGPS.ST_PARSE  \
+     tb_system::tb_System.myGPS.ST_CHECK  \
+     tb_system::tb_System.myGPS.ST_IDLE  \
+     {tb_system::tb_System.myGPS.NS[2:0]}  \
+     {tb_system::tb_System.myGPS.PS[2:0]}  \
+     {tb_system::tb_System.myGPS.CHAR_CNT[7:0]}  \
+     {tb_system::tb_System.myGPS.NMEA[23:0]}  \
+     {tb_system::tb_System.myGPS.RxD_data_in[7:0]}  \
+     tb_system::tb_System.myGPS.RxD_data_in_ready  \
+     tb_system::tb_System.myGPS.clr_index  \
+     tb_system::tb_System.myGPS.data_valid_out  \
+     tb_system::tb_System.myGPS.data_valid_reg  \
+     tb_system::tb_System.myGPS.data_valid_sig  \
+     tb_system::tb_System.myGPS.inc_index  \
+     tb_system::tb_System.myGPS.index_counter  \
+     {tb_system::tb_System.myGPS.time_out[47:0]}  \
+     {tb_system::tb_System.myGPS.time_reg[47:0]}  \
+     {tb_system::tb_System.myGPS.time_sig[47:0]} 
+
+#
+# Cursors
+#
+set time 8859600ns
+if {[catch {cursor new -name  TimeA -time $time}] != ""} {
+    cursor set -using TimeA -time $time
+}
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1920x1017+0+23}] != ""} {
+    window geometry "Waveform 1" 1920x1017+0+23
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar select designbrowser
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 0
+
+
+set groupId0 [waveform add -groups tb_system]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    tb_system::tb_System.clk {}
+    tb_system::tb_System.rst {}
+    tb_system::tb_System.SD_read_next_line {}
+    tb_system::tb_System.SD_data_valid {}
+    {tb_system::tb_System.SD_zone[1:0]} {}
+    {tb_system::tb_System.SD_start_time[31:0]} {-radix %a}
+    {tb_system::tb_System.SD_stop_time[31:0]} {-radix %a}
+    tb_system::tb_System.gps_data_in_ready {}
+    {tb_system::tb_System.gps_data_in[7:0]} {}
+    tb_system::tb_System.gps_data_valid_out {}
+    {tb_system::tb_System.gps_time_out[47:0]} {-radix %a}
+    tb_system::tb_System.raining {}
+    tb_system::tb_System.zone_0_out {}
+    tb_system::tb_System.zone_1_out {}
+    tb_system::tb_System.zone_2_out {}
+    tb_system::tb_System.zone_3_out {}
+} childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+
+set groupId0 [waveform add -groups system]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    tb_system::tb_System.mySystem.clk {}
+    tb_system::tb_System.mySystem.rst {}
+    tb_system::tb_System.mySystem.INSP_PERIOD {-radix %d}
+    tb_system::tb_System.mySystem.LINE_NUMBER {-radix %d}
+    tb_system::tb_System.mySystem.TCLK {-radix %d}
+    tb_system::tb_System.mySystem.ST_IDLE {}
+    tb_system::tb_System.mySystem.ST_INSP {}
+    tb_system::tb_System.mySystem.NS {}
+    tb_system::tb_System.mySystem.PS {}
+    tb_system::tb_System.mySystem.raining {}
+    tb_system::tb_System.mySystem.gps_data_valid {}
+    {tb_system::tb_System.mySystem.gps_time_reg[31:0]} {}
+    tb_system::tb_System.mySystem.SD_read_next_line {}
+    tb_system::tb_System.mySystem.SD_data_valid {}
+    {tb_system::tb_System.mySystem.SD_zones[1:0]} {}
+    {tb_system::tb_System.mySystem.SD_start_time[31:0]} {}
+    {tb_system::tb_System.mySystem.SD_stop_time[31:0]} {}
+    tb_system::tb_System.mySystem.clr_time {}
+    tb_system::tb_System.mySystem.time_counter {}
+    tb_system::tb_System.mySystem.inc_line {}
+    tb_system::tb_System.mySystem.clr_line {}
+    tb_system::tb_System.mySystem.line_counter {}
+    tb_system::tb_System.mySystem.inc_rain {}
+    tb_system::tb_System.mySystem.clr_rain {}
+    tb_system::tb_System.mySystem.rain_counter {}
+    tb_system::tb_System.mySystem.zone_0 {}
+    tb_system::tb_System.mySystem.zone_1 {}
+    tb_system::tb_System.mySystem.zone_2 {}
+    tb_system::tb_System.mySystem.zone_3 {}
+} childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+
+set groupId0 [waveform add -groups sdcard]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    tb_system::tb_System.mySDCard.clk {}
+    tb_system::tb_System.mySDCard.NS {}
+    tb_system::tb_System.mySDCard.PS {}
+    tb_system::tb_System.mySDCard.FILE_START {}
+    tb_system::tb_System.mySDCard.read_next_line {}
+    {tb_system::tb_System.mySDCard.ram_addr[7:0]} {}
+    tb_system::tb_System.mySDCard.data_valid {}
+    {tb_system::tb_System.mySDCard.zone_reg[15:0]} {}
+    {tb_system::tb_System.mySDCard.zone[1:0]} {}
+    {tb_system::tb_System.mySDCard.start_time[31:0]} {-radix %a}
+    {tb_system::tb_System.mySDCard.stop_time[31:0]} {-radix %a}
+} childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+
+set groupId0 [waveform add -groups gps]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    tb_system::tb_System.myGPS.CLK {}
+    tb_system::tb_System.myGPS.ST_PARSE {}
+    tb_system::tb_System.myGPS.ST_CHECK {}
+    tb_system::tb_System.myGPS.ST_IDLE {}
+    {tb_system::tb_System.myGPS.NS[2:0]} {}
+    {tb_system::tb_System.myGPS.PS[2:0]} {}
+    {tb_system::tb_System.myGPS.CHAR_CNT[7:0]} {}
+    {tb_system::tb_System.myGPS.NMEA[23:0]} {-radix %a}
+    {tb_system::tb_System.myGPS.RxD_data_in[7:0]} {-radix %a}
+    tb_system::tb_System.myGPS.RxD_data_in_ready {}
+    tb_system::tb_System.myGPS.clr_index {}
+    tb_system::tb_System.myGPS.data_valid_out {}
+    tb_system::tb_System.myGPS.data_valid_reg {}
+    tb_system::tb_System.myGPS.data_valid_sig {}
+    tb_system::tb_System.myGPS.inc_index {}
+    tb_system::tb_System.myGPS.index_counter {}
+    {tb_system::tb_System.myGPS.time_out[47:0]} {}
+    {tb_system::tb_System.myGPS.time_reg[47:0]} {}
+    {tb_system::tb_System.myGPS.time_sig[47:0]} {}
+} childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+
+waveform xview limits 8857976ns 8859673ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Layout selection
+#
+

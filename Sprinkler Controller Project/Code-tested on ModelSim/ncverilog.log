@@ -1,0 +1,16 @@
+ncverilog(64): 15.10-s024: (c) Copyright 1995-2016 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.10-s024: Started on Feb 17, 2018 at 14:31:23 EST
+ncverilog
+	+access+r
+	tb_system.v
+	system.v
+	gps.v
+	ram.v
+	sdcard.v
+Loading snapshot worklib.tb_System:v .................... Done
+ncsim> source /tools/cadence/incisiv151hf/tools/inca/files/ncsimrc
+ncsim> run
+Simulation complete via $finish(1) at time 17740940 NS + 1
+./tb_system.v:110       $finish;
+ncsim> exit
+TOOL:	ncverilog	15.10-s024: Exiting on Feb 17, 2018 at 14:31:26 EST  (total: 00:00:03)
